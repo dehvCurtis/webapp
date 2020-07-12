@@ -15,8 +15,8 @@ pipeline {
     stage ('Secret-Scanner') {
         steps {
           sh 'docker pull gesellix/trufflehog'
-          sh 'docker run -t gesellix/trufflehog --json https://github.com/dehvCurtis/WebApp.git > /home/$USER/truffle_output.json'
-          sh 'cat /tmp/truffle_output.json'
+          sh 'docker run -t gesellix/trufflehog --json https://github.com/dehvCurtis/WebApp.git > truffle_output.json'
+          sh 'cat truffle_output.json'
           }
         }
     stage ('Build') {
