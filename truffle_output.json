@@ -1,0 +1,43 @@
+root@ip-172-31-30-7:~# docker run -t gesellix/trufflehog --json https://github.com/dehvCurtis/WebApp.git
+{
+    "branch": "master",
+    "commit": "commit\n",
+    "commitHash": "e0250decd634f8f6756ac7bc0f38797d448003f1",
+    "date": "2020-07-12 22:46:22",
+    "diff": "@@ -18,4 +18,8 @@\n   <build>\n     <finalName>WebApp</finalName>\n   </build>\n-</project>\n\\ No newline at end of file\n+</project>\n+\n+\n+random_stringB64 = \"ZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNEva\"\n+random_stringHex = \"b3A0a1FDfe86dcCE945B72\"\n\\ No newline at end of file\n",
+    "path": "pom.xml",
+    "printDiff": "@@ -18,4 +18,8 @@\n   <build>\n     <finalName>WebApp</finalName>\n   </build>\n-</project>\n\\ No newline at end of file\n+</project>\n+\n+\n+random_stringB64 = \"\u001b[93mZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNEva\u001b[0m\"\n+random_stringHex = \"\u001b[93mb3A0a1FDfe86dcCE945B72\u001b[0m\"\n\\ No newline at end of file\n",
+    "reason": "High Entropy",
+    "stringsFound": [
+        "ZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNEva",
+        "b3A0a1FDfe86dcCE945B72"
+    ]
+}
+{
+    "branch": "master",
+    "commit": "commit\n",
+    "commitHash": "e0250decd634f8f6756ac7bc0f38797d448003f1",
+    "date": "2020-07-12 22:46:22",
+    "diff": "@@ -5,6 +5,3 @@\n <web-app>\n   <display-name>Archetype Created Web Application</display-name>\n </web-app>\n-\n-random_stringB64 = \"ZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNEva\"\n-random_stringHex = \"b3A0a1FDfe86dcCE945B72\"\n\\ No newline at end of file\n",
+    "path": "src/main/webapp/WEB-INF/web.xml",
+    "printDiff": "@@ -5,6 +5,3 @@\n <web-app>\n   <display-name>Archetype Created Web Application</display-name>\n </web-app>\n-\n-random_stringB64 = \"\u001b[93mZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNEva\u001b[0m\"\n-random_stringHex = \"\u001b[93mb3A0a1FDfe86dcCE945B72\u001b[0m\"\n\\ No newline at end of file\n",
+    "reason": "High Entropy",
+    "stringsFound": [
+        "ZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNEva",
+        "b3A0a1FDfe86dcCE945B72"
+    ]
+}
+{
+    "branch": "master",
+    "commit": "commit\n",
+    "commitHash": "4b2fd53d1458c952427ec9e03585c08dc1277226",
+    "date": "2020-07-12 22:43:09",
+    "diff": "@@ -19,7 +19,3 @@\n     <finalName>WebApp</finalName>\n   </build>\n </project>\n-\n-\n-random_stringB64 = \"ZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNEva\"\n-random_stringHex = \"b3A0a1FDfe86dcCE945B72\"\n\\ No newline at end of file\n",
+    "path": "pom.xml",
+    "printDiff": "@@ -19,7 +19,3 @@\n     <finalName>WebApp</finalName>\n   </build>\n </project>\n-\n-\n-random_stringB64 = \"\u001b[93mZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNEva\u001b[0m\"\n-random_stringHex = \"\u001b[93mb3A0a1FDfe86dcCE945B72\u001b[0m\"\n\\ No newline at end of file\n",
+    "reason": "High Entropy",
+    "stringsFound": [
+        "ZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNEva",
+        "b3A0a1FDfe86dcCE945B72"
+    ]
+}
