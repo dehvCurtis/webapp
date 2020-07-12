@@ -1,0 +1,6 @@
+stage ('') {
+  steps {
+    sh 'docker pull gesellix/trufflehog'
+    sh ''
+  }
+}
