@@ -12,6 +12,12 @@ pipeline {
         '''
       }
     }
+    stage ('Secret-Scanner') {
+        steps {
+
+          sh 'docker run -t gesellix/trufflehog --json https://github.com/dehvCurtis/WebApp.git > truffle_output'
+          }
+        }
     stage ('Build') {
       steps {
         sh 'mvn clean package'
@@ -24,12 +30,6 @@ pipeline {
         }
       }
     }
-    stage ('Secret-Scanner') {
-        steps {
-
-          sh 'docker run -t gesellix/trufflehog --json https://github.com/dehvCurtis/WebApp.git > truffle_output'
-          }
-        }
   }
 }
 
