@@ -12,35 +12,10 @@ pipeline {
         '''
       }
     }
-    stage ('Secret-Scanner') {
-        steps {
-          sh 'docker pull gesellix/trufflehog'
-          sh 'docker run -t gesellix/trufflehog --json https://github.com/dehvCurtis/WebApp.git > truffle_output.json'
-          sh 'cat truffle_output.json'
-          }
-        }
-    stage ('Source Composition Analysis') {
-      steps {
-         sh 'rm owasp* || true'
-         sh 'wget "https://raw.githubusercontent.com/dehvCurtis/WebApp/master/owasp-dependency-check.sh" '
-         sh 'chmod +x owasp-dependency-check.sh'
-         sh 'bash owasp-dependency-check.sh'
-         sh 'cat /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-report.xml'
-
-      }
-    }
     stage ('Build') {
       steps {
         sh 'mvn clean package'
       }
     }
-    stage ('Tomcat-Deploy') {
-      steps {
-        sshagent(['tomcat_server']) {
-          sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@13.52.102.33:/opt/tomcat/webapps/webapp.war'
-        }
-      }
-    }
   }
 }
-
