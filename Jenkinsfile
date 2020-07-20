@@ -20,13 +20,13 @@ pipeline {
           sh 'cat truffle_output.json'
           }
         }
-    stage ('Tomcat-Deploy') {
-      steps {
-        sshagent(['tomcat_server']) {
-          sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@54.176.139.137:/opt/tomcat/webapps/webapp.war'
-        }
-      }
-    }
+//     stage ('Tomcat-Deploy') {
+//       steps {
+//         sshagent(['tomcat_server']) {
+//           sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@54.176.139.137:/opt/tomcat/webapps/webapp.war'
+//         }
+//       }
+//     }
     stage ('Build') {
       steps {
         sh 'mvn clean package'
